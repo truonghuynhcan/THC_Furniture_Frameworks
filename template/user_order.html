@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/a_style.css">
+
+    <script src="https://kit.fontawesome.com/0e14ebdea1.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light py-2 fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand fw-bold" href="index.html">THC <span class="text-primary">Furniture</span></a>
+                <!-- Toggle Btn -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- SideBar -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">THC <span
+                                class="text-primary">Furniture</span></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav nav-underline justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Sản phẩm
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Hệ thống</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tinh tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Liên hệ</a>
+                            </li>
+                        </ul>
+                        <!-- Login / Sign up -->
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                            <div class="dropdown">
+                                <button class="border-0 bg-transparent" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fa-regular fa-user"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="login.html">Đăng nhập</a></li>
+                                    <li><a class="dropdown-item" href="signup.html">Đăng ký</a></li>
+                                </ul>
+                            </div>
+                            <a class="text-decoration-none text-black px-3 py-1 bg-primary rounded-4 text-white"
+                                href="cart.html">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- bill start -->
+    <div class="container mt-5 py-3">
+        <h1 class="h3 text-center">Chi tiết đơn hàng</h1>
+        <div class="row mt-3">
+            <div class="col-12 col-lg-8 d-flex flex-column gap-3">
+                <!-- Mã đơn hàng -->
+                <section class="bg-secondary-subtle border border-1 border-dark-subtle rounded-1">
+                    <div class="container">
+                        <div class="mb-1 fw-bold d-inline">Đơn hàng: <span class="text-primary">2092231</span> </div>
+                        <span class="ms-2 text-info fw-bold">(Đã giao hàng)</span>
+                        <p class="mb-1">02/01/2024 - 22:51</p>
+                    </div>
+                </section>
+
+                <!-- Thông tin khách hàng | người nhận -->
+                <div class="row">
+                    <div class="col-5">
+                        <section class="border border-1 border-dark-subtle rounded-1">
+                            <div class="container bg-secondary-subtle">
+                                <span class="text-uppercase text-black-50">
+                                    khách hàng
+                                </span>
+                            </div>
+                            <div class="container">
+                                <div class="d-flex flex-column">
+                                    <span class=" fw-bold">Trương Huỳnh Can</span>
+                                    <span class="text-black-50 fw-medium">0971735117</span>
+                                    <br>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-7">
+                        <section class="border border-1 border-dark-subtle rounded-1">
+                            <div class="container bg-secondary-subtle">
+                                <span class="text-uppercase text-black-50">
+                                    người nhận
+                                </span>
+                            </div>
+                            <div class="container">
+                                <div class="d-flex flex-column">
+                                    <span class=" fw-bold">Can</span>
+                                    <span class="text-black-50 fw-medium">0971735117</span>
+                                    <span class="text-black-50 fw-medium">Gò vấp, TP HCM</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
+                <!-- Thông tin sp -->
+                <section class="border border-1 border-dark-subtle rounded-1">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="table-secondary">
+                                <th scope="col">Tên sản phẩm</th>
+                                <th scope="col" class="text-center">Số lượng</th>
+                                <th scope="col" class="text-end">Đơn giá</th>
+                                <th scope="col" class="text-end">Tổng tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="fw-medium">Đèn lồng lộn</th>
+                                <td class="text-center">1</td>
+                                <td class="text-end">10.000 ₫</td>
+                                <td class="text-end">10.000 ₫</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-medium">Đèn lồng lộn</th>
+                                <td class="text-center">1</td>
+                                <td class="text-end">10.000 ₫</td>
+                                <td class="text-end">10.000 ₫</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-medium">Đèn lồng lộn</th>
+                                <td class="text-center">1</td>
+                                <td class="text-end">10.000 ₫</td>
+                                <td class="text-end">10.000 ₫</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <div class="col-12 col-lg-4 d-flex flex-column gap-3">
+                <!-- Phương thức thanh toán -->
+                <section class="border border-1 border-dark-subtle rounded-1">
+                    <div class="container bg-secondary-subtle">
+                        <span class="text-uppercase text-black-50">
+                            Phương thức thanh toán
+                        </span>
+                    </div>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <span class="text-black-50 fw-bold">Tiền mặt</span>
+                            <span class="fw-bold text-body-secondary">10.000.000 ₫</span>
+                        </div>
+                    </div>
+                </section>
+                <!-- thanh toán -->
+                <section class="border border-1 border-dark-subtle rounded-1">
+                    <div class="container">
+                        <div class="d-flex justify-content-between mt-1">
+                            <span class="text-black-50 fw-medium">Tạm tính</span>
+                            <span class="fw-bold text-body-secondary">10.000.000 ₫</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-1">
+                            <span class="text-black-50 fw-medium">Phí vận chuyển</span>
+                            <span class="fw-bold text-body-secondary">25.000 ₫</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-1">
+                            <span class="text-black-50 fw-medium">Mã giảm giá</span>
+                            <span class="fw-bold text-danger">- 10.000 ₫</span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-1">
+                            <span class="text-black-50 fw-medium">Thành tiền</span>
+                            <span class="fw-bold text-">10.000 ₫</span>
+                        </div>
+
+                        <hr>
+
+                        <div class="d-flex justify-content-between mt-1">
+                            <span class="text-black-50 fw-medium">Cần thanh toán</span>
+                            <span class="fw-bold text-danger fs-4">10.000 ₫</span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col"><button class="btn container-fluid btn-secondary">Ghi chú </button></div>
+                            <div class="col"><button class="btn container-fluid btn-secondary">Sửa đơn </button></div>
+                            <div class="col"><button class="btn container-fluid btn-secondary">Hủy Đơn </button></div>
+                        </div>
+
+                        <div>
+                            <button class="container-fluid btn btn-primary my-3 fs-5">Đóng</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+    <!-- bill end-->
+
+    <!-- footer start -->
+    <footer class="pt-5 bg-dark text-white" data-bs-theme="dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>THC Furniture</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">Với sứ mệnh "Khách hàng là ưu tiên số 1" chúng tôi luôn mạng lại giá
+                            trị tốt nhất</li>
+                        <li class="nav-item mb-2">Địa chỉ: Quận Gò Vấp, TP.HCM</li>
+                        <li class="nav-item mb-2">Điện thoại: 1900 6750</li>
+                        <li class="nav-item mb-2">Email: support@sapo.vn</li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Chính sách</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chính sách thành
+                                viên</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chính sách thanh
+                                toán</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chính sách đổi
+                                sản phẩm</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chính sách bảo
+                                mật</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chính sách cộng
+                                tác viên</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Hướng dẫn</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Hướng dẫn mua
+                                hàng</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Hướng dẫn đổi
+                                trả</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Hướng dẫn thanh
+                                toán</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chương trình cộng
+                                tác viên</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Giải đáp thắc
+                                mắc</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Đăng ký nhận tin</h5>
+                        <p>Đăng ký ngay! Để nhận thật nhiều ưu đãi</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email...</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email...">
+                            <button class="btn btn-primary" type="button">Đăng ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>© 2023 Company, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#twitter"></use>
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#instagram"></use>
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#facebook"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+</body>
+
+<script src="../public/js/bootstrap.bundle.js"></script>
+
+</html>
