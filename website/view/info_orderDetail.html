@@ -1,0 +1,130 @@
+<!-- bill start -->
+<div class="container mt-5 py-3">
+    <h1 class="h3 text-center">Chi tiết đơn hàng</h1>
+    <div class="row mt-3">
+        <div class="col-12 col-lg-8 d-flex flex-column gap-3">
+            <!-- Mã đơn hàng -->
+            <section class="bg-secondary-subtle border border-1 border-dark-subtle rounded-1">
+                <div class="container">
+                    <div class="mb-1 fw-bold d-inline">Đơn hàng: <span class="text-primary">{{order.id}}</span> </div>
+                    <span class="ms-2 text-info fw-bold">({{order.status}})</span>
+                    <p class="mb-1">{{order.date | date: 'dd-MM-yyyy'}}</p>
+                </div>
+            </section>
+
+            <!-- Thông tin người nhận -->
+            <div class="row">
+                <div class="col-7">
+                    <section class="border border-1 border-dark-subtle rounded-1">
+                        <div class="container bg-secondary-subtle">
+                            <span class="text-uppercase text-black-50">
+                                người nhận
+                            </span>
+                        </div>
+                        <div class="container">
+                            <div class="d-flex flex-column">
+                                <span class=" fw-bold">{{order.name}}</span>
+                                <span class="text-black-50 fw-medium">{{order.phone}}</span>
+                                <span class="text-black-50 fw-medium">{{order.address}}</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-5">
+                    <section class="border border-1 border-dark-subtle rounded-1">
+                        <div class="container bg-secondary-subtle">
+                            <span class="text-uppercase text-black-50">
+                                Ghi chú
+                            </span>
+                        </div>
+                        <div class="container">
+                            <div class="d-flex flex-column">
+                                <span ng-if="order.note" class="text-black-50 fw-medium">{{order.note}}</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Thông tin sp -->
+            <section class="border border-1 border-dark-subtle rounded-1">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-secondary">
+                            <th scope="col">Tên sản phẩm</th>
+                            <th scope="col" class="text-end">Đơn giá</th>
+                            <th scope="col" class="text-center">Số lượng</th>
+                            <th scope="col" class="text-end">Tổng tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in order.products">
+                            <th scope="row" class="fw-medium">{{item.name}}</th>
+                            <td class="text-end">{{item.price |number:0}} ₫</td>
+                            <td class="text-center">{{item.quantity |number:0}}</td>
+                            <td class="text-end">{{item.quantity*item.price |number:0}} ₫</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div class="col-12 col-lg-4 d-flex flex-column gap-3">
+            <!-- Phương thức thanh toán -->
+            <section class="border border-1 border-dark-subtle rounded-1">
+                <div class="container bg-secondary-subtle">
+                    <span class="text-uppercase text-black-50">
+                        Phương thức thanh toán
+                    </span>
+                </div>
+                <div class="container">
+                    <div class="d-flex justify-content-between">
+                        <span class="text-black-50 fw-bold">{{order.payment}}</span>
+                    </div>
+                </div>
+            </section>
+            <!-- thanh toán -->
+            <section class="border border-1 border-dark-subtle rounded-1">
+                <div class="container">
+                    <div class="d-flex justify-content-between mt-1">
+                        <span class="text-black-50 fw-medium">Tạm tính</span>
+                        <span class="fw-bold text-body-secondary">{{tinhTong(order.products) | number:0}} ₫</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-1">
+                        <span class="text-black-50 fw-medium">Phí vận chuyển</span>
+                        <span class="fw-bold text-body-secondary">+ {{order.shipFee |number:0}} ₫</span>
+                    </div>
+
+                    <div ng-if="order.discount" class="d-flex justify-content-between mt-1">
+                        <span class="text-black-50 fw-medium">Mã giảm giá</span>
+                        <span class="fw-bold text-danger">- {{order.discount}} ₫</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-1">
+                        <span class="text-black-50 fw-medium">Thành tiền</span>
+                        <span class="fw-bold text-">{{order.total | number : 0}} ₫</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between mt-1">
+                        <span class="text-black-50 fw-medium">Cần thanh toán</span>
+                        <span class="fw-bold text-danger fs-4">{{order.total | number : 0}} ₫</span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col"><button disabled class="btn container-fluid btn-secondary">Ghi chú </button></div>
+                        <div class="col"><button disabled class="btn container-fluid btn-secondary">Sửa đơn </button></div>
+                        <div class="col"><button class="btn container-fluid btn-secondary">Hủy Đơn </button></div>
+                    </div>
+
+                    <div>
+                        <a href="#!info_orders" class="container-fluid btn btn-primary my-3 fs-5">Đóng</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</div>
+<!-- bill end-->

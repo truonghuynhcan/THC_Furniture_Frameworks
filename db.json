@@ -1,0 +1,152 @@
+{
+  "products": [
+    {
+      "id": "11",
+      "name": "Đèn thả trần nhà thủy tinh",
+      "price": "525000",
+      "img": "screenshot16622043263ea574ceef.webp"
+    },
+    {
+      "id": "12",
+      "name": "Đèn thả hiện đại thiết kế Vòng Oring cao cấp",
+      "price": "5650000",
+      "img": "thahiendai707035511f76bf4e.webp"
+    },
+    {
+      "id": "13",
+      "name": "Đèn thả hiện đại - thiết kế Led thanh ngang DC",
+      "price": "2750000",
+      "img": "denthahiendaidc41062908956.webp"
+    },
+    {
+      "id": "14",
+      "name": "Đèn chùm ánh sáng mặt dây chuyền lá thủy tinh",
+      "price": "1750000",
+      "img": "h01d01ce170a048268acbaa5306579.webp"
+    },
+    {
+      "id": "15",
+      "name": "Đèn gỗ trang trí thả trần thẩm mỹ",
+      "price": "420000",
+      "img": "dengothatrantt6701600x600.webp"
+    },
+    {
+      "id": "16",
+      "name": "Đèn gỗ trang trí thả trần Plywood nhập khẩu",
+      "price": "360000",
+      "img": "dengothatranhwtt811.webp"
+    },
+    {
+      "id": "17",
+      "name": "Đèn chùm cổ điển nghệ thuật chao thủy tinh đục",
+      "price": "1150000",
+      "img": "denchumcodiennghethuatchao.webp"
+    },
+    {
+      "id": "18",
+      "name": "Đèn chùm hiện đại phòng khách thiết kế khối ngân hà",
+      "price": "2165000",
+      "img": "denchumhiendaiphongkhachba.webp"
+    },
+    {
+      "id": "19",
+      "name": "Đèn cây đứng trang trí nội thất phòng khách",
+      "price": "2399000",
+      "img": "txc15jpeg.webp"
+    },
+    {
+      "id": "20",
+      "name": "Đèn thả trần nghệ thuật hiện đại",
+      "price": "3200000",
+      "img": "denthatrannghethuatgp119bap373.webp"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "name": "Phạm Ngọc Cường",
+      "account": "cuongpn11@gmail.com",
+      "password": "cuongpn11"
+    },
+    {
+      "id": "2",
+      "name": "Trương Huỳnh Can",
+      "account": "canthps36499@gmail.com",
+      "password": "canthps36499",
+      "role": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "6c10",
+      "name": "Trương Huỳnh Can",
+      "phone": "0971735117",
+      "address": "53, Số 1, Xã Nội Thôn, Huyện Hà Quảng, Tỉnh Cao Bằng",
+      "products": [
+        {
+          "id": "11",
+          "name": "Đèn thả trần nhà thủy tinh",
+          "price": "525000",
+          "img": "screenshot16622043263ea574ceef.webp",
+          "quantity": 1
+        },
+        {
+          "id": "12",
+          "name": "Đèn thả hiện đại thiết kế Vòng Oring cao cấp",
+          "price": "5650000",
+          "img": "thahiendai707035511f76bf4e.webp",
+          "quantity": 3
+        }
+      ],
+      "idUser": "1",
+      "shipFee": 20000,
+      "total": 17495000,
+      "payment": "transfer",
+      "date": "2024-04-07",
+      "status": "order",
+      "note": ""
+    }
+  ],
+  "comments": [
+    {
+      "id": "6ba8",
+      "idPro": "11",
+      "content": "alo",
+      "idUser": "646f",
+      "name": "Trương Huỳnh Can",
+      "date": "2024-04-07 13:48:09"
+    },
+    {
+      "id": "a5b0",
+      "idPro": "11",
+      "content": "sản phẩm này tốt lắm",
+      "idUser": "646f",
+      "name": "Trương Huỳnh Can",
+      "date": "2024-04-07 13:52:56"
+    },
+    {
+      "id": "d008",
+      "idPro": "12",
+      "content": "sản phẩm này zui nè",
+      "idUser": "646f",
+      "name": "Trương Huỳnh Can",
+      "date": "2024-04-07 13:53:17"
+    },
+    {
+      "id": "4760",
+      "idPro": "11",
+      "content": "á sản phẩm này thầy mua rồi nè",
+      "idUser": "1",
+      "name": "Phạm Ngọc Cường",
+      "date": "2024-04-07 13:54:28"
+    },
+    {
+      "id": "3b5a",
+      "idPro": "11",
+      "content": "màu đèn rất đẹp",
+      "idUser": "1",
+      "name": "Phạm Ngọc Cường",
+      "date": "2024-04-07 13:58:13"
+    }
+  ]
+}

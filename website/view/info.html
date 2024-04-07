@@ -1,0 +1,69 @@
+<!-- Breadcrumb star-->
+<section class="position-relative" style="">
+    <img src="../public/upload/banners/breadcrumb.webp" class="w-100" alt="">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"
+        class="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center">
+        <h1>Trang khách hàng</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" class="text-primary">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Trang khách hàng</li>
+        </ol>
+    </nav>
+</section>
+<!-- Breadcrumb end-->
+
+<!-- info star -->
+<section>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Xin chào</h6>
+                        <h5 class="card-title">{{user.name}}</h5>
+                        <div class="list-group list-group-flush mt-4">
+                            <a href="#!info" class="list-group-item list-group-item-action active" aria-current="true">
+                                Thông tin tài khoản
+                            </a>
+                            <a href="#!info_orders" class="list-group-item list-group-item-action">Đơn hàng</a>
+                            <a href="#!info_changePass" class="list-group-item list-group-item-action">Đổi mật khẩu</a>
+                            <a href="javascript:void(0)" ng-click="logout()" class="list-group-item list-group-item-action">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-9">
+                <div class="container">
+                    <h2>Thông tin tài khoản</h2>
+                    <form class="row g-3">
+                        <div class="col-md-12">
+                            <label for="fullname" class="form-label">Họ và tên</label>
+                            <input type="text" ng-model="user.name" class="form-control" id="fullname">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Tài khoản / Email</label>
+                            <input type="email" value="{{user.account}}" class="form-control" id="email" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4" value="{{user.password}}" disabled>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="tel" class="form-label">Số điện thoại</label>
+                            <input type="text" ng-model="user.phone" class="form-control" id="tel" name="tel" placeholder="Cập nhật số điện thoại">
+                        </div>
+                        <div class="col-9">
+                            <label for="inputAddress" class="form-label">Address</label>
+                            <input type="text" disabled id="inputAddress" name="address" value="{{user.address}}" placeholder="Cập nhật địa chỉ" class="form-control">
+                        </div>  
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Lưu thông tin</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- info end -->

@@ -1,0 +1,229 @@
+<!-- Breadcrumb star-->
+<section class="position-relative mb-3">
+    <img src="public/upload/banners/breadcrumb.webp" class="w-100" alt="">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"
+        class="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center">
+        <h1 class="text-primary h2">Kệ đựng sách</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#!" class="text-body text-decoration-none">Trang Chủ</a>
+            </li>
+            <li class="breadcrumb-item"><a href="#!" class="text-body text-decoration-none">Đồ nội thất</a>
+            </li>
+            <li class="breadcrumb-item active text-primary" aria-current="page">Kệ đựng sách</li>
+        </ol>
+    </nav>
+</section>
+<!-- Breadcrumb end-->
+<!-- product-detail star-->
+<div class="container">
+    <section class="row">
+        <div id="carouselExampleIndicators" class="carousel slide col-6 d-flex">
+            <div class="carousel-indicators position-relative d-flex flex-column ms-1 me-3 top-0 justify-content-start">
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="public/upload/products/{{item.img}}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <!-- truyền ảnh vào đây, tự đổ ra -->
+
+        </div>
+        <div class="col-6 d-flex flex-column">
+            <h1 class="h4">{{item.name}}</h1>
+            <p>Thương hiệu: <span class="text-primary">xxx</span> | Tình trạng: <span class="text-primary">xxx</span>
+            </p>
+            <div class="bg-light border-top border-bottom px-2 py-3 mb-3">
+                <div class="d-flex align-items-center">
+                    <span class="h3 me-3 text-danger">{{item.price | number:0}} ₫</span>
+                    <span ng-if="item.discount" class="text-decoration-line-through">XXX ₫</span>
+                </div>
+                <div ng-if="item.discount">
+                    Tiết kiệm: <span class="text-primary">XXX ₫</span>
+                </div>
+            </div>
+            <div class="bg-light border-start border-primary border-3 rounded overflow-hidden px-2 pt-2 mb-3">
+                <strong class="h4 me-3">Mô tả</strong>
+                <p class="my-2">Kệ giày 6 tầng rộng 50cm được làm từ gỗ thông tự nhiên đã qua tẩm sấy, được
+                    đánh
+                    bóng trơn tru
+                    nên không có bụi gỗ không gây hại cho sức khỏe người dùng. Góc cạnh của kệ được thiết kế tỉ mỉ
+                    mang lại cảm giác chắc chắn hài hoà.</p>
+            </div>
+            <div class="px-2 pt-2 d-flex align-items-center gap-3 mb-3">
+                <label for="">Số Lượng</label>
+                <div class="buttons_added">
+                    <input ng-model="$root.quantity" class="form-control" max="10" min="1" type="number">
+                </div>
+            </div>
+            <a href="#" class="btn container-fluid text-decoration-none btn-primary mb-3">
+                <strong class="fs-5">Mua ngay</strong>
+                <br>
+                <span class="fs-6 fw-light">Giao hàng tận nơi
+                    hoặc nhận tại cửa hàng</span>
+            </a>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <button ng-click="addToCart(item)"  class="btn container-fluid btn-outline-primary text-decoration-none py-3">Thêm vào
+                        giỏ
+                        hàng</button>
+                </div>
+                <div class="col-6">
+                    <button ng-click="addToCart(item)"  class="btn container-fluid btn-outline-primary text-decoration-none py-3">Thêm vào
+                        giỏ
+                        hàng</button>
+                </div>
+            </div>
+            <table class="fs-6 mb-3">
+                <tr>
+                    <td><span><i class="fa-solid fa-truck-fast text-primary"></i></span> Miễn phí vận
+                        chuyển tại
+                        TP.HCM</td>
+                    <td><span><i class="fa-solid fa-medal text-primary"></i></span> Bảo hành chính hãng toàn quốc
+                    </td>
+                </tr>
+                <tr>
+                    <td><span><i class="fa-regular fa-handshake text-primary"></i></span> Cam kết chính hãng 100%
+                    </td>
+                    <td><span><i class="fa-solid fa-boxes-packing text-primary"></i></span> 1 đổi 1 nếu sản phẩm lỗi
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+</div>
+<!-- product-detail end-->
+
+<!-- product-describe start -->
+<div class="container">
+    <section class="row">
+        <div class="col-8">
+            <h3>Mô tả sản phẩm</h3>
+            <hr>
+            <p>
+                Kệ giày 6 tầng rộng 50cm được làm từ gỗ thông tự nhiên đã qua tẩm sấy, được đánh bóng trơn tru nên
+                không có bụi gỗ không gây hại cho sức khỏe người dùng. Góc cạnh của kệ được thiết kế tỉ mỉ mang lại
+                cảm giác chắc chắn hài hoà.
+            </p>
+        </div>
+        <div class="col-4 d-none">
+            <h3>Thông số kỹ thuật</h3>
+            <hr>
+        </div>
+    </section>
+</div>
+<!-- product-describe end -->
+<!-- BÌNH LUẬN start -->
+<div class=" container mt-5" id="comment">
+    <strong class="h3">Bình luận</strong>
+    <form ng-show="user" action="" class="card my-3 border-0 bg-light-subtle">
+        <div class="row g-0">
+            <div class="col-1">
+                <img src="public/upload/avatar/ava1.jpg" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-11">
+                <div class="card-body py-1 px-2">
+                    <h5 class="card-title">{{user.name}}</h5>
+                    <div class="d-flex gap-3">
+                        <textarea ng-model="content" rows="2" class="w-100 bg-body rounded-1"
+                            placeholder="Bạn đang nghĩ gì?"></textarea>
+                        <button type="submit" ng-click="comment()" class="btn btn-success">Gửi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div ng-repeat="c in dsBL | orderBy:'-date' | limitTo:BLnum" class="card my-3 border-0 bg-light-subtle">
+        <div class="row g-0">
+            <div class="col-auto">
+                <img src="public/upload/avatar/ava1.jpg" width="60" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-10">
+                <div class="card-body py-1 px-2">
+                    <h5 class="card-title">{{c.name}} <button ng-click="xoaBL(c.id)" ng-hide="c.name!=user.name" class="fs-6 rounded">Xóa</button></h5>
+                    <p class="card-text">{{c.content}}</p>
+                    <p class="card-text"><small class="text-body-secondary">{{Date(c.date) | date:'HH:mm dd/MM/yyyy'}}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button ng-if="dsBL.length>BLnum" ng-click="xemthemBL()" class="container-fluid btn btn-sm btn-outline-secondary rounded">Xem thêm</button>
+</div>
+<!-- BÌNH LUẬN end -->
+<!-- product-similar start -->
+<section class="container">
+    <!-- title -->
+    <div class="d-flex justify-content-between align-items-center">
+        <h3>Sản phẩm liên quan</h3>
+        <a href="#" class="text-decoration-none text-primary">Xem thêm >></a>
+    </div>
+    <!-- products -->
+    <div class="row products">
+        <div class="col-sm-6 col-lg-3 p-2 mb-2">
+            <div class="card position-relative" style="width: 100%;">
+                <div class="position-absolute top-0 start-0 bg-sale z-1">15%</div>
+                <div class="overflow-hidden">
+                    <img src="../public/upload/products/vn111342077qukwlf0rhzptr4i2ef.webp" class="card-img-top z-0"
+                        alt="...">
+                </div>
+                <div class="card-body">
+                    <a href="product-detail.html" class="text-decoration-none card-title h5">Kệ trang trí decor phòng -
+                        kệ vi sóng với nhiều tầng</a>
+                    <p class="card-text"><strong>500.000₫</strong> <span
+                            class="text-secondary text-decoration-line-through">730.000₫</span></p>
+                    <a href="#" class="btn btn-primary container-fluid">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 p-2 mb-2">
+            <div class="card position-relative" style="width: 100%;">
+                <div class="position-absolute top-0 start-0 bg-sale z-1">15%</div>
+                <div class="overflow-hidden">
+                    <img src="../public/upload/products/vn111342077qukwlf0rhzptr4i2ef.webp" class="card-img-top z-0"
+                        alt="...">
+                </div>
+                <div class="card-body">
+                    <a href="product-detail.html" class="text-decoration-none card-title h5">Kệ trang trí decor phòng -
+                        kệ vi sóng với nhiều tầng</a>
+                    <p class="card-text"><strong>500.000₫</strong> <span
+                            class="text-secondary text-decoration-line-through">730.000₫</span></p>
+                    <a href="#" class="btn btn-primary container-fluid">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 p-2 mb-2">
+            <div class="card position-relative" style="width: 100%;">
+                <div class="position-absolute top-0 start-0 bg-sale z-1">15%</div>
+                <div class="overflow-hidden">
+                    <img src="../public/upload/products/vn111342077qukwlf0rhzptr4i2ef.webp" class="card-img-top z-0"
+                        alt="...">
+                </div>
+                <div class="card-body">
+                    <a href="product-detail.html" class="text-decoration-none card-title h5">Kệ trang trí decor phòng -
+                        kệ vi sóng với nhiều tầng</a>
+                    <p class="card-text"><strong>500.000₫</strong> <span
+                            class="text-secondary text-decoration-line-through">730.000₫</span></p>
+                    <a href="#" class="btn btn-primary container-fluid">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 p-2 mb-2">
+            <div class="card position-relative" style="width: 100%;">
+                <div class="position-absolute top-0 start-0 bg-sale z-1">15%</div>
+                <div class="overflow-hidden">
+                    <img src="../public/upload/products/vn111342077qukwlf0rhzptr4i2ef.webp" class="card-img-top z-0"
+                        alt="...">
+                </div>
+                <div class="card-body">
+                    <a href="product-detail.html" class="text-decoration-none card-title h5">Kệ trang trí decor phòng -
+                        kệ vi sóng với nhiều tầng</a>
+                    <p class="card-text"><strong>500.000₫</strong> <span
+                            class="text-secondary text-decoration-line-through">730.000₫</span></p>
+                    <a href="#" class="btn btn-primary container-fluid">Thêm vào giỏ</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- product-similar end -->

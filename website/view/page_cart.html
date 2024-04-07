@@ -1,0 +1,62 @@
+<!-- Breadcrumb star-->
+<section class="position-relative">
+    <img src="public/upload/banners/breadcrumb.webp" class="w-100" alt="">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"
+        class="position-absolute top-50 start-50 translate-middle-y translate-middle-x d-flex flex-column align-items-center">
+        <h1>Giỏ hàng</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-primary">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+    </nav>
+</section>
+<!-- Breadcrumb end-->
+
+<!-- cart star -->
+<section>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12 col-lg-9">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width: 40%;">Thông tin sản phẩm</th>
+                            <th class="text-center" scope="col">Đơn giá</th>
+                            <th class="text-center" scope="col">Số lượng</th>
+                            <th class="text-center" scope="col">Thành tiền</th>
+                            <th scope="col"><button ng-click="deleteALL()" class="btn btn-sm btn-outline-success"><i class="fa-solid fa-trash-can"></i> Xóa hết</button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in cart">
+                            <td class="d-flex gap-2">
+                                <img src="public/upload/products/{{item.img}}" height="60" alt="img" class="rounded">
+                                <span>{{item.name}}</span>
+                            </td>
+                            <td class="text-primary text-end">{{item.price | number:2}}₫</td>
+                            <td class="text-center">
+                                <input type="number" ng-model="item.quantity" ng-change="saveCart()" class="form-control">
+                            </td>
+                            <td class="text-primary text-end">{{item.price*item.quantity | number:2}}₫</td>
+                            <td class="text-center"><button ng-click="delete(index)" class="btn btn-primary rounded-0"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Đơn hàng</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">(3 sản phẩm)</h6>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text">Tổng đơn</p>
+                            <p class="card-text">{{tinhTong() | number:0}} ₫</p>
+                        </div>
+                        <a ng-hide="cart.length == 0" href="#!checkout" class="card-link btn btn-primary container-fluid">Thanh toán</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- cart end -->

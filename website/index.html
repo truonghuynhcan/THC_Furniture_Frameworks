@@ -1,0 +1,60 @@
+<!-- 
+ps36499
+  _______     _______      _______  
+ /  ____ \   /  ___  \    /  ____ \
+|  /    \|  |  /   \  |  |  /    \  \
+| |         | |     | |  | |      | |
+| | Trương  | |_____| |  | |      | |
+| | Huỳnh   |  _____  |  | |      | |
+| |         | |     | |  | |      | |
+\  \____/ \ | |     | |  | |      | |
+ \_______/  | |     | |  | |      | |
+
+-->
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THC FUNITURE</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/a_style.css">
+
+    <link rel="stylesheet" href="public/fontawesome-free-6.5.1-web/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+</head>
+
+<body ng-app="myapp" ng-controller="mainCtrl">
+    <header ng-include="'view/layout_header.html'"></header>
+    <br>
+    <br>
+    <div ng-show="loading" class="text-center p-5 h1"><i class="fa-solid fa-spinner fa-spin-pulse fa-2xl"></i></div>
+    <div ng-view></div>
+
+    <!-- footer start -->
+    <footer ng-include="'view/layout_footer.html'"></footer>
+    <!-- footer end -->
+
+    <script src="public/js/bootstrap.bundle.min.js"></script>
+    <script src="public/Angular/angular.min.js"></script>
+    <script src="public/Angular/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controller/mainCtrl.js"></script>
+    <script src="controller/homeCtrl.js"></script>
+    <script src="controller/proDetailCtrl.js"></script>
+    <script src="controller/loginCtrl.js"></script>
+    <script src="controller/signupCtrl.js"></script>
+    <script src="controller/cartCtrl.js"></script>
+    <script src="controller/checkoutCtrl.js"></script>
+    <script src="controller/infoOrdersCtrl.js"></script>
+    <!-- <script src="controller/infoCtrl.js"></script> -->
+
+    
+</body>
+
+
+</html>

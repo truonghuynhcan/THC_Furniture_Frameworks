@@ -1,0 +1,64 @@
+<!-- Breadcrumb star-->
+<section class="position-relative mb-3">
+    <img src="../public/upload/banners/breadcrumb.webp" class="w-100" alt="">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"
+        class="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center">
+        <h1 class="text-primary h2">Đăng ký tài khoản</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" class="text-body">Trang Chủ</a></li>
+            <li class="breadcrumb-item active text-primary" aria-current="page">Đăng ký tài khoản</li>
+        </ol>
+    </nav>
+</section>
+<!-- Breadcrumb end-->
+<!-- signup star-->
+<div class="container">
+    <div class="row">
+        <div class="col-0 col-md-1 col-lg-3 col-lg-4"></div>
+        <div class="col-12 col-md-10 col-lg-6 col-xl-4">
+            <div class="row mb-3">
+                <a href="#!login" class="col-6 h6 text-center border-bottom pb-3 text-decoration-none text-body">ĐĂNG
+                    NHẬP</a>
+                <a href="#!signup"
+                    class="col-6 h6 text-center border-bottom pb-3 text-decoration-none border-primary text-primary">ĐĂNG
+                    KÝ</a>
+            </div>
+            <p class="fs-5 text-center">ĐĂNG KÝ</p>
+            <form ng-submit="signup($event)" class="login">
+                <div class="form-floating mb-3 border-bottom border-primary">
+                    <input type="text" ng-model="name" class="form-control" id="fullname" placeholder="Nguyễn Văn An">
+                    <label for="fullname">Họ và tên</label>
+                </div>
+                <div class="form-floating mb-3 border-bottom border-primary">
+                    <input type="email" ng-model="email" class="form-control" id="floatingInput"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Email</label>
+                </div>
+                <div class="form-floating mb-3 border-bottom border-primary">
+                    <input type="tel" ng-model="phone" class="form-control" id="sdt" placeholder="">
+                    <label for="sdt">Số điện thoại</label>
+                </div>
+                <div class="form-floating mb-3 border-bottom border-primary">
+                    <input type="password" ng-model="password" minlenght="6" class="form-control" id="pwd" placeholder="Password">
+                    <label for="pwd">Mật khẩu</label>
+                </div>
+                <div class="form-floating mb-3 border-bottom border-primary">
+                    <input type="password" ng-model="repassword" class="form-control" id="repwd" placeholder="Password">
+                    <label for="repwd">Nhập lại mật khẩu</label>
+                </div>
+                <div class="d-grid mb-4">
+                    <button type="submit" class="btn btn-primary">Đăng ký</button>
+                </div>
+            </form>
+            <div class="d-flex flex-column align-items-center gap-3 mb-5">
+                <span>Hoặc đăng nhập bằng</span>
+                <div>
+                    <a class="btn text-white" style="background-color: #0056b3;" href="">Facebook</a>
+                    <a class="btn btn-danger text-white " href="">Google</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- signup end-->
